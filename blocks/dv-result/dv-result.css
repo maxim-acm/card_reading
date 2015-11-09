@@ -1,0 +1,50 @@
+.dv-result-container
+{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.dv-result-container:after
+{
+    line-height: 0;
+
+    display: table;
+    clear: both; 
+
+    content: '';
+}
+
+.result__box
+{
+    float: left;
+
+    width: 29.3%;
+    margin-right: 3%;
+}
+.result__box .description
+{
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+.result__box:first-child
+{
+    margin-left: 3%;
+}
+
+.result__box-wrap
+{
+    padding: 40px 20px;
+}
+
+.card-md
+{
+    width: 190px;
+    height: 266px;
+    margin: 0 auto;
+
+    background: url('../dv-cards/card-back.png');
+}
+
+/*# sourceMappingURL=dv-result.css.map */

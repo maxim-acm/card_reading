@@ -1,0 +1,136 @@
+.dv-cards-container {
+  max-width: 1340px;
+  margin: auto;
+  padding: 20px 50px; }
+
+.cards__row {
+  position: relative;
+  height: 200px;
+  max-width: 1314px; }
+
+.card {
+  display: inline-block;
+  width: 126px;
+  height: 178px;
+  position: absolute;
+  background: url("card-back.png");
+  background-size: cover;
+  border-radius: 9px;
+  margin-right: 20px;
+  cursor: pointer; }
+
+.card:hover {
+  background: antiquewhite; }
+
+.card-selected {
+  background: aquamarine; }
+
+.card-1 {
+  left: 0; }
+
+.card-2 {
+  left: 2.55556%; }
+
+.card-3 {
+  left: 5.11111%; }
+
+.card-4 {
+  left: 7.66667%; }
+
+.card-5 {
+  left: 10.22222%; }
+
+.card-6 {
+  left: 12.77778%; }
+
+.card-7 {
+  left: 15.33333%; }
+
+.card-8 {
+  left: 17.88889%; }
+
+.card-9 {
+  left: 20.44444%; }
+
+.card-10 {
+  left: 23%; }
+
+.card-11 {
+  left: 25.55556%; }
+
+.card-12 {
+  left: 28.11111%; }
+
+.card-13 {
+  left: 30.66667%; }
+
+.card-14 {
+  left: 33.22222%; }
+
+.card-15 {
+  left: 35.77778%; }
+
+.card-16 {
+  left: 38.33333%; }
+
+.card-17 {
+  left: 40.88889%; }
+
+.card-18 {
+  left: 43.44444%; }
+
+.card-19 {
+  left: 46%; }
+
+.card-20 {
+  left: 48.55556%; }
+
+.card-21 {
+  left: 51.11111%; }
+
+.card-22 {
+  left: 53.66667%; }
+
+.card-23 {
+  left: 56.22222%; }
+
+.card-24 {
+  left: 58.77778%; }
+
+.card-25 {
+  left: 61.33333%; }
+
+.card-26 {
+  left: 63.88889%; }
+
+.card-27 {
+  left: 66.44444%; }
+
+.card-28 {
+  left: 69%; }
+
+.card-29 {
+  left: 71.55556%; }
+
+.card-30 {
+  left: 74.11111%; }
+
+.card-31 {
+  left: 76.66667%; }
+
+.card-32 {
+  left: 79.22222%; }
+
+.card-33 {
+  left: 81.77778%; }
+
+.card-34 {
+  left: 84.33333%; }
+
+.card-35 {
+  left: 86.88889%; }
+
+.card-36 {
+  left: 89.44444%; }
+
+/*# sourceMappingURL=dv-cards.css.map */

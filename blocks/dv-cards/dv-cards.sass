@@ -1,45 +1,41 @@
-
-body
-  margin: 0
-  background-color: aliceblue
-
-.cards
-  margin: 0 20px
-  background-color: antiquewhite
+.dv-cards-container
+  max-width: 1340px
+  margin: auto
+  padding: 20px 50px
 
 .cards__row
-  height: 180px
-  margin: 0 100px 0 20px
-  background-color: aquamarine
   position: relative
-$card-width: 100px
-.row__card
+  height: 200px
+  max-width: 1314px
+
+
+$card-width: 126px
+
+.card
   display: inline-block
   width: $card-width
   height: 178px
-  border: solid black 1px
-  background-color: cornflowerblue
   position: absolute
-
-
-
-.row__card:hover
-  top: 20px
-  margin-left: -5px
+  background: url("card-back.png")
+  background-size: cover
+  border-radius: 9px
+  margin-right: 20px
   cursor: pointer
-  background-color: antiquewhite
-  
-$cards-left: 100% / 36
+
+.card:hover
+  background: antiquewhite
+
+.card-selected
+  background: aquamarine
+
+$cards-left: 92% / 36
 
 .card-1
   left: 0
-
 .card-2
   left: 1 * $cards-left
-
 .card-3
   left: 2 * $cards-left
-
 .card-4
   left: 3 * $cards-left
 .card-5
