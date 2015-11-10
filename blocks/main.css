@@ -2,8 +2,7 @@
 @import url(dv-result/dv-result.css);
 @import url(dv-title/dv-title.css);
 body {
-  margin: 0;
-  background-color: aliceblue; }
+  margin: 0; }
 
 .visible {
   visibility: visible; }

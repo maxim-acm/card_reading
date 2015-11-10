@@ -31,10 +31,25 @@ $( document ).ready( function (){
 
         this.addCard = function () {
 
-            document.getElementById('choosen-cards').children[currentCards].hidden = false;
-        }
+            function randomNumber() {
+                return Math.floor(Math.random()*35);
+            }
+
+            var cardData = cardsArray[randomNumber()];
+            console.log(cardData);
+
+            var card = document.getElementById('choosen-cards').children[currentCards];
+            console.log(card);
+
+            card.querySelector('.description').innerHTML = cardData['description'];
+
+            card.hidden = false;
+
+        };
 
     }
+
+
 
     window.game = new Game();
 
