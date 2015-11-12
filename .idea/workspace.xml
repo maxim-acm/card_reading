@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d15d1c8b-65ce-44a2-9069-3d086403336c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.css" afterPath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.css.map" afterPath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.sass" afterPath="$PROJECT_DIR$/blocks/dv-cards/dv-cards.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-    </list>
+    <list default="true" id="d15d1c8b-65ce-44a2-9069-3d086403336c" name="Default" comment="" />
     <ignored path="card_reading.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
