@@ -9,8 +9,12 @@ $card-width: 126px
 
 .cards__row
   position: relative
-  height: 200px
+  height: 300px
   margin-right: 110px
+
+.cards__row
+  .card:nth-child(n + 31)
+    top: 100px
 
 .card
   display: inline-block
@@ -30,19 +34,12 @@ $card-width: 126px
   height: 100%
 
 .card__hover:hover
-  opacity: 0.3
+  opacity: 0.4
   background-color: $card-hover-color
-  border-radius: inherit
+
 
 .card-selected
   display: none
-
-.row-1
-
-  bottom: -100px
-
-.row-2
-  bottom: 200px
 
 
 $cards-left: 100% / 30

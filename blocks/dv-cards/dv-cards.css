@@ -5,8 +5,11 @@
 
 .cards__row {
   position: relative;
-  height: 200px;
+  height: 300px;
   margin-right: 110px; }
+
+.cards__row .card:nth-child(n + 31) {
+  top: 100px; }
 
 .card {
   display: inline-block;
@@ -26,18 +29,11 @@
   height: 100%; }
 
 .card__hover:hover {
-  opacity: 0.3;
-  background-color: #F4F4F4;
-  border-radius: inherit; }
+  opacity: 0.4;
+  background-color: #F4F4F4; }
 
 .card-selected {
   display: none; }
-
-.row-1 {
-  bottom: -100px; }
-
-.row-2 {
-  bottom: 200px; }
 
 .card-1 {
   left: 0; }
