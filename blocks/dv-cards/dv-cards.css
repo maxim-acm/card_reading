@@ -18,7 +18,8 @@
   border-radius: 9px;
   margin-right: 20px;
   cursor: pointer;
-  border: solid #F4F4F4 2px; }
+  border: solid #f8fafa 7px;
+  box-shadow: 0 0 1px 1px rgba(104, 104, 104, 0.65); }
 
 .card__hover {
   width: 100%;
