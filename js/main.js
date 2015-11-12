@@ -14,12 +14,21 @@ $( document ).ready( function (){
             currentCards = -1;
 
 
+
         this.init = function () {
+            __self.showCards();
             __self.viewCards();
+
         };
 
         this.showCards = function () {
-
+            domElem.cards.each(function (elem) {
+                (function (that, i) {
+                    var t = setTimeout(function(){
+                        $(that).removeClass('hidden')
+                    }, 30 * i);
+                })(this, elem)
+            })
         };
 
         this.viewCards = function () {
