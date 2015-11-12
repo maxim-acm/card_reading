@@ -34,7 +34,7 @@ $( document ).ready( function (){
         this.viewCards = function () {
 
             domElem.cards.click( function (){
-                if (currentCards < 2) {
+                if (currentCards < 4) {
                     $( this ).addClass( 'card-selected' );
                     currentCards++;
                     __self.addCard();
