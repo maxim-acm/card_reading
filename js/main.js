@@ -18,6 +18,10 @@ $( document ).ready( function (){
             __self.viewCards();
         };
 
+        this.showCards = function () {
+
+        };
+
         this.viewCards = function () {
 
             domElem.cards.click( function (){
