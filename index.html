@@ -5,7 +5,9 @@
     <title>Card reading</title>
     <link rel="stylesheet" href="blocks/main.css" type="text/css"/>
     <link rel="stylesheet" href="blocks/dv-result/transition.css">
-
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/handlebars-v4.0.4.js"></script>
+    <script src="js/render.js"></script>
 </head>
 <body>
 
@@ -17,189 +19,17 @@
 
         <div class="dv-cards">
             <div class="dv-cards-container">
-                <div class="cards__row">
-                        <div class="hidden card card-1">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-2">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-3">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-4">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-5">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-6">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-7">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-8">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-9">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-10">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-11">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-12">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-13">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-14">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-15">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-16">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-17">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-18">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-19">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-20">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-21">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-22">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-23">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-24">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-25">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-26">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-27">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-28">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-29">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-30">
-                            <div class="card__hover"></div>
-                        </div>
+                <div class="cards__row" id="render">
+                    <script id="some-template" type="text/x-handlebars-template">
 
+                        {{#item}}
+                        <div class="card card-{{card}} hidden">
+                            <div class="card__hover"></div>
+                        </div>
+                        {{/item}}
 
-                        <div class="hidden card card-1">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-2">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-3">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-4">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-5">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-6">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-7">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-8">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-9">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-10">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-11">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-12">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-13">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-14">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-15">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-16">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-17">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-18">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-19">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-20">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-21">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-22">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-23">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-24">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-25">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-26">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-27">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-28">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-29">
-                            <div class="card__hover"></div>
-                        </div>
-                        <div class="hidden card card-30">
-                            <div class="card__hover"></div>
-                        </div>
+                    </script>
+
                 </div>
             </div>
         </div>
@@ -274,11 +104,18 @@
             </div>
         </div>
 
+        </div>
+
     </section>
 
+
+
 </body>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/cards.js"></script>
-<script src="js/handlebars-v4.0.4.js"></script>
+
+
+
+
 </html>

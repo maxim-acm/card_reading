@@ -48,7 +48,7 @@ $( document ).ready( function (){
                 return Math.floor(Math.random()*35);
             }
 
-            var cardData = cardsArray[randomNumber()];
+            var cardData = cardsData.item[randomNumber()];
             console.log(cardData);
 
             var card = document.getElementById('choosen-cards').children[currentCards];
