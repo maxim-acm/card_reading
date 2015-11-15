@@ -1,0 +1,18 @@
+.header {
+  background: #e67a00;
+  line-height: 55px; }
+
+.header-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+.header__title {
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 23px; }
+
+/*# sourceMappingURL=header.css.map */
