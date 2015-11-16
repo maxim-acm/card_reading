@@ -3,6 +3,7 @@
 @import url(header/header.css);
 @import url(footer/footer.css);
 @import url(result/result.css);
+@import url(control/control.css);
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
