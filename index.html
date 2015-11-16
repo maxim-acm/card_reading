@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="blocks/dv-result/transition.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/handlebars-v4.0.4.js"></script>
-    <script src="js/render.js"></script>
+    <script src="js/renderCards.js"></script>
 </head>
 <body>
+
     <header class="header">
         <div class="header-container">
             <h2 class="header__title">Гадание на картах таро</h2>
         </div>
     </header>
+
     <section class="divination">
 
         <div class="dv-cards">
@@ -23,7 +25,7 @@
                     <script id="some-template" type="text/x-handlebars-template">
 
                         {{#item}}
-                        <div class="card card-{{card}} hidden">
+                        <div data-number="{{card}}" class="card card-{{card}} hidden">
                             <div class="card__hover"></div>
                         </div>
                         {{/item}}
@@ -32,8 +34,6 @@
 
                 </div>
             </div>
-        </div>
-
         </div>
 
     </section>
@@ -119,6 +119,6 @@
 </body>
 
 <script src="js/main.js"></script>
-<script src="js/cards.js"></script>
+<script src="js/cardsData.js"></script>
 
 </html>

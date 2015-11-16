@@ -7,17 +7,16 @@ $( document ).ready( function (){
     function Game() {
 
         var domElem = {
-            cards: $( '.card' ),
-            resultContainer: $( '#choosen-cards' )
-        },
+                cards:              $('.card'),
+                resultContainer:    $('#choosen-cards')
+            },
             __self = this,
-            currentCards = -1;
-
-
+            currentCards = -1,
+            shuffleCards = [];
 
         this.init = function () {
             __self.showCards();
-            __self.viewCards();
+            __self.selectCard();
 
         };
 
@@ -25,47 +24,55 @@ $( document ).ready( function (){
             domElem.cards.each(function (elem) {
                 (function (that, i) {
                     var t = setTimeout(function(){
-                        $(that).removeClass('hidden')
+                        $(that).removeClass( 'hidden' );
                     }, 30 * i);
                 })(this, elem)
             })
         };
 
-        this.viewCards = function () {
+        this.selectCard = function () {
+
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex ;
+
+                while (0 !== currentIndex) {
+
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+
+                return array;
+            }
+
+            shuffleCards = cardsData.item.slice();
+            shuffle(shuffleCards);
 
             domElem.cards.click( function (){
-                if (currentCards < 4) {
+
+                if ( currentCards < 4 ) {
                     $( this ).addClass( 'card-selected' );
+                    var currentCardNumber = $( this ).data('number');
                     currentCards++;
-                    __self.addCard();
+                    __self.addCard( currentCardNumber);
                 }
             })
         };
 
-        this.addCard = function () {
-
-            function randomNumber() {
-                return Math.floor(Math.random()*35);
-            }
-
-            var cardData = cardsData.item[randomNumber()];
-            console.log(cardData);
+        this.addCard = function (cardNumber) {
 
             var card = document.getElementById('choosen-cards').children[currentCards];
-            console.log(card);
-
-            card.querySelector('.description').innerHTML = cardData['description'];
-
+            card.querySelector('.description').innerHTML = shuffleCards[cardNumber]['description'];
             card.hidden = false;
 
         };
 
     }
 
-
-
     window.game = new Game();
-
     game.init();
 
 });
