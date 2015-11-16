@@ -31,8 +31,9 @@ $( document ).ready( function (){
                 })( this, elem )
             });
 
-            domElem.restartButton.click(function () {
+            domElem.restartButton.on('click', function () {
                 __self.restart();
+
             });
         };
 
@@ -56,6 +57,8 @@ $( document ).ready( function (){
 
             shuffleCards = cardsData.item.slice();
             shuffle( shuffleCards );
+
+            console.log(shuffleCards);
 
             domElem.cards.on( 'click', function (){
 
@@ -96,9 +99,10 @@ $( document ).ready( function (){
             });
 
             domElem.cards.off('click');
+            domElem.restartButton.off('click');
+
 
             currentCardsSel = -1;
-
             game.init();
         }
 
