@@ -9,7 +9,7 @@ $( document ).ready( function (){
         var domElem = {
                 cards:              $( '.card' ),
                 resultContainer:    $( '#choosen-cards' ),
-                cardBox:            $( '.result__box' ),
+                cardBox:            $( '.l-result__box' ),
                 restartButton:      $( '#restart-divination' )
             },
             __self = this,
@@ -81,9 +81,15 @@ $( document ).ready( function (){
         this.addCard = function ( cardNumber ) {
 
             var card = document.getElementById( 'choosen-cards' ).children[ currentCardsSel ];
-           // console.log(card);
-            card.querySelector( '.description' ).innerHTML = shuffleCards[ cardNumber - 1 ][ 'description' ];
-            card.hidden = false;
+            console.log(card);
+
+            if (shuffleCards[ cardNumber - 1 ][ 'card' ] <= 41) {
+                $(card).addClass('box-wide');
+            }
+            card.querySelector( '.l-card-md' ).setAttribute( 'src', 'cards-images/Cards_v-' + shuffleCards[ cardNumber - 1 ][ 'card' ] + '.jpg' );
+            card.querySelector( '.l-description' ).innerHTML = shuffleCards[ cardNumber - 1 ][ 'description' ];
+
+            $(card).removeClass( 'hidden' );
 
         };
 
@@ -98,8 +104,12 @@ $( document ).ready( function (){
                 this.hidden = true;
             });
 
-            domElem.cards.off('click');
-            domElem.restartButton.off('click');
+            domElem.resultContainer.children().each( function() {
+               $( this).addClass('hidden');
+            });
+
+            domElem.cards.off( 'click' );
+            domElem.restartButton.off( 'click' );
 
 
             currentCardsSel = -1;

@@ -20,12 +20,12 @@
   width: 126px;
   height: 178px;
   position: absolute;
-  background: url("card-back.jpg");
+  background: url("../../cards-images/Cards_back.jpg");
   background-size: cover;
   border-radius: 9px;
   margin-right: 20px;
   cursor: pointer;
-  border: solid #f8fafa 7px;
+  border: solid #ffffff 7px;
   box-shadow: 0 0 1px 1px rgba(104, 104, 104, 0.65); }
 
 .card__hover {
