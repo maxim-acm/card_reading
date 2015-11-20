@@ -89,7 +89,7 @@ $( window ).load( function (){
 
             setTimeout(function(){
                 $(card).removeClass( 'hidden' );
-            }, 100);
+            }, 300);
 
         };
 
