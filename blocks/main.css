@@ -14,4 +14,8 @@ body {
 .hidden {
   visibility: hidden; }
 
+@media (max-width: 1024px) {
+  .l-card-md {
+    border: solid #ffffff 5px; } }
+
 /*# sourceMappingURL=main.css.map */
