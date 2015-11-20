@@ -84,17 +84,23 @@
 <script src="js/main.js"></script>
 <script src="js/cardsData.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $( '.card' ).hover(function(){
+
+            $( this ).children( '.card__hover').addClass('card__hover-active');
+        }, function(){
+            $( this ).children( '.card__hover').removeClass('card__hover-active');
+        });
+    })
+</script>
+
 <!--
 <script type="text/javascript">
 
    jQuery(document).ready(function(){
 
-       $( '.card' ).hover(function(){
 
-          $( this ).children( '.card__hover').addClass('card__hover-active');
-       }, function(){
-          $( this ).children( '.card__hover').removeClass('card__hover-active');
-       });
 
        // preload images
        preload([
