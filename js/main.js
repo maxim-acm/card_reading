@@ -33,7 +33,7 @@ $( window ).load( function (){
                 })( this, elem )
             });
 
-            domElem.restartButton.on('click', function () {
+            domElem.restartButton.on('click', function () {  // Max, put this event to the next function!
                 __self.restart();
 
             });
@@ -77,19 +77,29 @@ $( window ).load( function (){
 
         this.addCard = function ( cardNumber ) {
 
-            var card = document.getElementById( 'choosen-cards' ).children[ currentCardsSel - 1 ];
-
             var shuffleCardNumber = shuffleCards[ cardNumber - 1 ][ 'card' ];
 
-            if (shuffleCardNumber <= 41) {
-                $(card).addClass( 'box-wide' );
-            }
-            card.querySelector( '.l-card-md' ).setAttribute( 'src', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
-            //card.querySelector( '.l-description' ).innerHTML = shuffleCards[ cardNumber - 1 ][ 'description' ];
+            var resultCardsList = document.getElementById( 'resultCardsList' );
+            var card = resultCardsList.children[ currentCardsSel - 1 ];
 
-            setTimeout(function(){
-                $(card).removeClass( 'hidden' );
-            }, 300);
+            var resultBox = document.createElement( 'li' );
+            resultBox.className = 'l-result__box';
+
+            var newCard = document.createElement( 'div' );
+            newCard.className = 'l-result__card';
+
+            var newCardImg = document.createElement('img');
+            newCardImg.setAttribute( 'src', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
+            newCardImg.setAttribute( 'alt', 'card' );
+            newCardImg.classList.add( 'l-result__card--image' );
+
+
+           ( shuffleCardNumber <= 41 ) ? ( newCard.classList.add( 'l-result__card-horizontal' ) ) : ( newCard.classList.add( 'l-result__card-vertical' ) );
+
+            newCard.appendChild(newCardImg);
+            resultBox.appendChild(newCard);
+
+            resultCardsList.appendChild( resultBox );
 
         };
 
@@ -100,10 +110,12 @@ $( window ).load( function (){
 
             });
 
-            domElem.resultContainer.children().each( function() {
-                $( this ).addClass( 'hidden' );
-                $( this ).removeClass( 'box-wide' );
-            });
+            var resultCardsList = document.getElementById( 'resultCardsList' );
+
+            while (resultCardsList.lastChild) {
+                resultCardsList.removeChild(resultCardsList.lastChild);
+            }
+
 
             domElem.cards.off( 'click' );
             domElem.restartButton.off( 'click' );

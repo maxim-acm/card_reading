@@ -38,6 +38,18 @@
 .card-selected {
   display: none; }
 
+@media screen and (max-width: 1200px) {
+  .card {
+    height: 160px;
+    width: 120px; } }
+@media screen and (max-width: 1025px) {
+  .card {
+    height: 147px;
+    width: 110px; } }
+@media screen and (max-width: 971px) {
+  .card {
+    height: 133px;
+    width: 100px; } }
 .card-1,
 .card-31 {
   left: 0; }
