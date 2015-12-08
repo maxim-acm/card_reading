@@ -2,7 +2,7 @@ $card-hover-color: #F4F4F4
 $card-width: 126px
 
 .divination
-  padding: 40px 0
+  padding: 15px 0
   background: #f7f7f7
 
 .dv-cards-container
@@ -27,7 +27,6 @@ $card-width: 126px
   background: url("../../cards-images/Cards_back.jpg")
   background-size: cover
   border-radius: 9px
-  margin-right: 20px
   cursor: pointer
   border: solid #ffffff 7px
   box-shadow: 0 0 1px 1px rgba(104, 104, 104, 0.65)
@@ -43,6 +42,25 @@ $card-width: 126px
 
 .card-selected
   display: none
+
+@media screen and (max-width: 1200px )
+
+  .card
+    height: 160px
+    width: 120px
+
+@media screen and (max-width: 1025px )
+
+  .card
+    height: 147px
+    width: 110px
+
+@media screen and (max-width: 971px )
+
+  .card
+    height: 133px
+    width: 100px
+
 
 
 $cards-left: 100% / 30
@@ -137,3 +155,7 @@ $cards-left: 100% / 30
 .card-30,
 .card-60
   left: 29 * $cards-left
+
+
+
+
