@@ -1,5 +1,5 @@
 .divination {
-  padding: 40px 0;
+  padding: 15px 0;
   background: #f7f7f7; }
 
 .dv-cards-container {
@@ -23,7 +23,6 @@
   background: url("../../cards-images/Cards_back.jpg");
   background-size: cover;
   border-radius: 9px;
-  margin-right: 20px;
   cursor: pointer;
   border: solid #ffffff 7px;
   box-shadow: 0 0 1px 1px rgba(104, 104, 104, 0.65); }
