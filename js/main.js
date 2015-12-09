@@ -88,7 +88,12 @@ $( window ).load( function (){
             var newCard = document.createElement( 'div' );
             newCard.className = 'l-result__card';
 
+            var newCardLink = document.createElement( 'a' );
+            newCardLink.setAttribute( 'href', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
+            newCardLink.setAttribute( 'rel', 'lightbox');
+
             var newCardImg = document.createElement('img');
+            newCardImg.classList.add('quickbox');
             newCardImg.setAttribute( 'src', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
             newCardImg.setAttribute( 'alt', 'card' );
             newCardImg.classList.add( 'l-result__card--image' );
@@ -96,7 +101,8 @@ $( window ).load( function (){
 
            ( shuffleCardNumber <= 41 ) ? ( newCard.classList.add( 'l-result__card-horizontal' ) ) : ( newCard.classList.add( 'l-result__card-vertical' ) );
 
-            newCard.appendChild(newCardImg);
+            newCardLink.appendChild(newCardImg);
+            newCard.appendChild(newCardLink);
             resultBox.appendChild(newCard);
 
             resultCardsList.appendChild( resultBox );
