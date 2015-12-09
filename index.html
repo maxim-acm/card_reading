@@ -20,6 +20,10 @@
 
     <section class="divination">
 
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+
         <div class="dv-cards">
             <div class="dv-cards-container">
                 <div class="cards__row" id="render">
@@ -68,6 +72,7 @@
 <script src="js/main.js"></script>
 <script src="js/cardsData.js"></script>
 <script src="lightbox2-master/dist/js/lightbox.js"></script>
+<script src="js/loader.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -80,7 +85,7 @@
     })
 </script>
 
-<!--
+
 <script type="text/javascript">
 
    jQuery(document).ready(function(){
@@ -160,7 +165,7 @@
                var s = div.style;
                s.position = "absolute";
                s.top = s.left = 0;
-               s.visibility = "hidden";
+               s.display = "none";
                document.body.appendChild(div);
                div.innerHTML = "<img src=\"" + images.join("\" /><img src=\"") + "\" />";
                var lastImg = div.lastChild;
@@ -173,6 +178,6 @@
    });
 
 </script>
--->
+
 
 </html>

@@ -1,6 +1,7 @@
 .divination {
   padding: 15px 0;
-  background: #f7f7f7; }
+  background: #f7f7f7;
+  position: relative; }
 
 .dv-cards-container {
   max-width: 1340px;
@@ -49,7 +50,10 @@
 @media screen and (max-width: 971px) {
   .card {
     height: 133px;
-    width: 100px; } }
+    width: 100px; }
+
+  .cards__row {
+    height: 250px; } }
 .card-1,
 .card-31 {
   left: 0; }

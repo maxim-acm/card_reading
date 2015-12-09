@@ -4,6 +4,7 @@
 @import url(footer/footer.css);
 @import url(result/result.css);
 @import url(control/control.css);
+@import url(loader/loader.css);
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
