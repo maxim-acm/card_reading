@@ -29,13 +29,9 @@ $( window ).load( function (){
                 ( function ( that, i ) {
                     var t = setTimeout( function(){
                         $( that ).removeClass( 'hidden' );
+                        domElem.restartButton.off('click');
                     }, 30 * i );
                 })( this, elem )
-            });
-
-            domElem.restartButton.on('click', function () {  // Max, put this event to the next function!
-                __self.restart();
-
             });
         };
 
@@ -72,10 +68,17 @@ $( window ).load( function (){
                     __self.addCard( domCardNumber );
 
                 }
+
+
             })
         };
 
         this.addCard = function ( cardNumber ) {
+
+            domElem.restartButton.on('click', function () {
+                __self.restart();
+
+            });
 
             var shuffleCardNumber = shuffleCards[ cardNumber - 1 ][ 'card' ];
 
@@ -90,14 +93,13 @@ $( window ).load( function (){
 
             var newCardLink = document.createElement( 'a' );
             newCardLink.setAttribute( 'href', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
-            newCardLink.setAttribute( 'rel', 'lightbox');
+            newCardLink.setAttribute( 'rel', 'lightbox' );
 
             var newCardImg = document.createElement('img');
-            newCardImg.classList.add('quickbox');
+            newCardImg.classList.add( 'quickbox' );
             newCardImg.setAttribute( 'src', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg' );
             newCardImg.setAttribute( 'alt', 'card' );
             newCardImg.classList.add( 'l-result__card--image' );
-
 
            ( shuffleCardNumber <= 41 ) ? ( newCard.classList.add( 'l-result__card-horizontal' ) ) : ( newCard.classList.add( 'l-result__card-vertical' ) );
 
@@ -110,6 +112,7 @@ $( window ).load( function (){
         };
 
         this.restart = function () {
+
             domElem.cards.each( function () {
                 $( this ).addClass( 'hidden' );
                 $( this ).removeClass( 'card-selected' );
@@ -122,9 +125,7 @@ $( window ).load( function (){
                 resultCardsList.removeChild(resultCardsList.lastChild);
             }
 
-
             domElem.cards.off( 'click' );
-            domElem.restartButton.off( 'click' );
 
             currentCardsSel = 0;
 
