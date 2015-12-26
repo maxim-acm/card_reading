@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,iBAAiB;EACf,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,iBAAiB;EAC7B,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,MAAM",
-"sources": ["author.sass"],
-"names": [],
-"file": "author.css"
-}
