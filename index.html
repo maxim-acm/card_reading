@@ -5,176 +5,61 @@
     <title>Card reading</title>
     <link rel="stylesheet" href="blocks/main.css" type="text/css"/>
     <link rel="stylesheet" href="blocks/dv-result/transition.css">
-    <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/handlebars-v4.0.4.js"></script>
-    <script src="js/renderCards.js"></script>
+    <link href="js/lib/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+    <script src="js/lib/jquery-1.12.0.min/jquery-1.12.0.min.js"></script>
+    <script src="js/lib/handlebars-v4.0.5/handlebars-v4.0.5.js"></script>
 </head>
 <body>
+<header class="header">
+    <div class="header-container">
+        <h2 class="header__title">Проект "Жизнь как чудо" представляет метафорические карты "Memory"</h2>
+    </div>
+</header>
 
-    <header class="header">
-        <div class="header-container">
-            <h2 class="header__title">Проект  "Жизнь как чудо" представляет метафорические карты "Memory"</h2>
-        </div>
-    </header>
+<section class="divination">
+    <div class="loader">
+        <div class="loader-inner"></div>
+    </div>
 
-    <section class="divination">
-
-        <div class="loader">
-            <div class="loader-inner"></div>
-        </div>
-
-        <div class="dv-cards">
-            <div class="dv-cards-container">
-                <div class="cards__row" id="render">
-                    <script id="some-template" type="text/x-handlebars-template">
-
-                        {{#item}}
-                        <div data-number="{{card}}" class="card card-{{card}} hidden">
-                            <div class="card__hover"></div>
-                        </div>
-                        {{/item}}
-
-                    </script>
-
-                </div>
+    <div class="dv-cards">
+        <div class="dv-cards-container">
+            <div class="cards__row" id="render">
+                <script id="cards-template" type="text/x-handlebars">
+                    {{#for 60}}
+                    <div data-number="{{this}}" class="card card-{{this}} hidden">
+                        <div class="card__hover"></div>
+                    </div>
+                    {{/for}}
+                </script>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
+<section class="result">
+    <ul class="l-result-container" id="resultCardsList"></ul>
+</section>
 
-    <section class="result">
-
-            <ul class="l-result-container" id="resultCardsList">
-
-
-
-            </ul>
-
-    </section>
-
-    <section class="control">
-        <div class="control-container">
-            <div class="button">
-                <span class="button__restart" id="restart-divination"> сдать карты </span>
-            </div>
+<section class="control">
+    <div class="control-container">
+        <div class="button">
+            <span class="button__restart" id="restart-divination"> сдать карты </span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <h4>Автор колоды: Наталия Глотова - психолог, арт-терапевт, телесно-ориентированный терапевт, таролог, тренер. </h4>
-            <p>Заказать карты можно по тел: <b>+38(097)182-32-97</b>, e-mail: <b>tetiva77@mail.ru</b>, skype: <b>tetiva77</b>.</p>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="footer-container">
+        <h4>Автор колоды: Наталия Глотова - психолог, арт-терапевт, телесно-ориентированный терапевт, таролог,
+            тренер. </h4>
 
+        <p>Заказать карты можно по тел: <b>+38(097)182-32-97</b>, e-mail: <b>tetiva77@mail.ru</b>, skype: <b>tetiva77</b>.</p>
+    </div>
+</footer>
 </body>
-
 <script src="js/main.js"></script>
-<script src="js/cardsData.js"></script>
-<script src="lightbox2-master/dist/js/lightbox.js"></script>
+<script src="js/renderCards.js"></script>
+<script src="js/lib/lightbox2-master/dist/js/lightbox.js"></script>
 <script src="js/loader.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $( '.card' ).hover(function(){
-
-            $( this ).children( '.card__hover').addClass('card__hover-active');
-        }, function(){
-            $( this ).children( '.card__hover').removeClass('card__hover-active');
-        });
-    })
-</script>
-
-<script type="text/javascript">
-
-   jQuery(document).ready(function(){
-
-       // preload images
-       preload([
-           'cards-images/Cards_v-1.jpg',
-           'cards-images/Cards_v-2.jpg',
-           'cards-images/Cards_v-3.jpg',
-           'cards-images/Cards_v-4.jpg',
-           'cards-images/Cards_v-5.jpg',
-           'cards-images/Cards_v-6.jpg',
-           'cards-images/Cards_v-7.jpg',
-           'cards-images/Cards_v-8.jpg',
-           'cards-images/Cards_v-9.jpg',
-           'cards-images/Cards_v-10.jpg',
-           'cards-images/Cards_v-11.jpg',
-           'cards-images/Cards_v-12.jpg',
-           'cards-images/Cards_v-13.jpg',
-           'cards-images/Cards_v-14.jpg',
-           'cards-images/Cards_v-15.jpg',
-           'cards-images/Cards_v-16.jpg',
-           'cards-images/Cards_v-17.jpg',
-           'cards-images/Cards_v-18.jpg',
-           'cards-images/Cards_v-19.jpg',
-           'cards-images/Cards_v-20.jpg',
-           'cards-images/Cards_v-21.jpg',
-           'cards-images/Cards_v-22.jpg',
-           'cards-images/Cards_v-23.jpg',
-           'cards-images/Cards_v-24.jpg',
-           'cards-images/Cards_v-25.jpg',
-           'cards-images/Cards_v-26.jpg',
-           'cards-images/Cards_v-27.jpg',
-           'cards-images/Cards_v-28.jpg',
-           'cards-images/Cards_v-29.jpg',
-           'cards-images/Cards_v-30.jpg',
-           'cards-images/Cards_v-31.jpg',
-           'cards-images/Cards_v-32.jpg',
-           'cards-images/Cards_v-33.jpg',
-           'cards-images/Cards_v-34.jpg',
-           'cards-images/Cards_v-35.jpg',
-           'cards-images/Cards_v-36.jpg',
-           'cards-images/Cards_v-37.jpg',
-           'cards-images/Cards_v-38.jpg',
-           'cards-images/Cards_v-39.jpg',
-           'cards-images/Cards_v-40.jpg',
-           'cards-images/Cards_v-41.jpg',
-           'cards-images/Cards_v-42.jpg',
-           'cards-images/Cards_v-43.jpg',
-           'cards-images/Cards_v-44.jpg',
-           'cards-images/Cards_v-45.jpg',
-           'cards-images/Cards_v-46.jpg',
-           'cards-images/Cards_v-47.jpg',
-           'cards-images/Cards_v-48.jpg',
-           'cards-images/Cards_v-49.jpg',
-           'cards-images/Cards_v-50.jpg',
-           'cards-images/Cards_v-51.jpg',
-           'cards-images/Cards_v-52.jpg',
-           'cards-images/Cards_v-53.jpg',
-           'cards-images/Cards_v-54.jpg',
-           'cards-images/Cards_v-55.jpg',
-           'cards-images/Cards_v-56.jpg',
-           'cards-images/Cards_v-57.jpg',
-           'cards-images/Cards_v-58.jpg',
-           'cards-images/Cards_v-59.jpg',
-           'cards-images/Cards_v-60.jpg'
-
-       ]);
-
-       function preload(images) {
-           if (typeof document.body == "undefined") return;
-           try {
-
-               var div = document.createElement("div");
-               var s = div.style;
-               s.position = "absolute";
-               s.top = s.left = 0;
-               s.display = "none";
-               document.body.appendChild(div);
-               div.innerHTML = "<img src=\"" + images.join("\" /><img src=\"") + "\" />";
-               var lastImg = div.lastChild;
-               lastImg.onload = function() { document.body.removeChild(document.body.lastChild); };
-           }
-           catch(e) {
-               // Error. Do nothing.
-           }
-       }
-   });
-
-</script>
-
+<script src="js/preload_images.js"></script>
 </html>
