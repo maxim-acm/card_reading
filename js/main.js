@@ -6,7 +6,7 @@ $(window).load(function () {
             __self = this,
             currentCardsSel = 0,
             cardData = {
-                cards: new Array(60)
+                cards: new Array(56)
             },
             shuffleCards = [];
 
@@ -80,8 +80,6 @@ $(window).load(function () {
 
         this.addCard = function (cardNumber) {
 
-            console.log(cardNumber);
-
             domElem.restartButton.on('click', function () {
                 __self.restart();
             });
@@ -97,16 +95,16 @@ $(window).load(function () {
             newCard.className = 'l-result__card';
 
             var newCardLink = document.createElement('a');
-            newCardLink.setAttribute('href', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg');
+            newCardLink.setAttribute('href', 'cards-images/color-cards/' + shuffleCardNumber + '_Card.jpg');
             newCardLink.setAttribute('rel', 'lightbox');
 
             var newCardImg = document.createElement('img');
             newCardImg.classList.add('quickbox');
-            newCardImg.setAttribute('src', 'cards-images/Cards_v-' + shuffleCardNumber + '.jpg');
+            newCardImg.setAttribute('src', 'cards-images/color-cards/' + shuffleCardNumber + '_Card.jpg');
             newCardImg.setAttribute('alt', 'card');
             newCardImg.classList.add('l-result__card--image');
 
-            if (shuffleCardNumber <= 41) {
+            if (shuffleCardNumber <= 31) {
                 newCard.classList.add('l-result__card-horizontal');
             } else {
                 newCard.classList.add('l-result__card-vertical');

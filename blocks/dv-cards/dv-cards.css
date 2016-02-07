@@ -13,7 +13,7 @@
   height: 300px;
   margin-right: 110px; }
 
-.cards__row .card:nth-child(n + 32) {
+.cards__row .card:nth-child(n + 30) {
   top: 100px; }
 
 .card {
@@ -55,123 +55,115 @@
   .cards__row {
     height: 250px; } }
 .card-1,
-.card-31 {
+.card-29 {
   left: 0; }
 
 .card-2,
-.card-32 {
-  left: 3.33333%; }
+.card-30 {
+  left: 3.57143%; }
 
 .card-3,
-.card-33 {
-  left: 6.66667%; }
+.card-31 {
+  left: 7.14286%; }
 
 .card-4,
-.card-34 {
-  left: 10%; }
+.card-32 {
+  left: 10.71429%; }
 
 .card-5,
-.card-35 {
-  left: 13.33333%; }
+.card-33 {
+  left: 14.28571%; }
 
 .card-6,
-.card-36 {
-  left: 16.66667%; }
+.card-34 {
+  left: 17.85714%; }
 
 .card-7,
-.card-37 {
-  left: 20%; }
+.card-35 {
+  left: 21.42857%; }
 
 .card-8,
-.card-38 {
-  left: 23.33333%; }
+.card-36 {
+  left: 25%; }
 
 .card-9,
-.card-39 {
-  left: 26.66667%; }
+.card-37 {
+  left: 28.57143%; }
 
 .card-10,
-.card-40 {
-  left: 30%; }
+.card-38 {
+  left: 32.14286%; }
 
 .card-11,
-.card-41 {
-  left: 33.33333%; }
+.card-39 {
+  left: 35.71429%; }
 
 .card-12,
-.card-42 {
-  left: 36.66667%; }
+.card-40 {
+  left: 39.28571%; }
 
 .card-13,
-.card-43 {
-  left: 40%; }
+.card-41 {
+  left: 42.85714%; }
 
 .card-14,
-.card-44 {
-  left: 43.33333%; }
+.card-42 {
+  left: 46.42857%; }
 
 .card-15,
-.card-45 {
-  left: 46.66667%; }
-
-.card-16,
-.card-46 {
+.card-43 {
   left: 50%; }
 
+.card-16,
+.card-44 {
+  left: 53.57143%; }
+
 .card-17,
-.card-47 {
-  left: 53.33333%; }
+.card-45 {
+  left: 57.14286%; }
 
 .card-18,
-.card-48 {
-  left: 56.66667%; }
+.card-46 {
+  left: 60.71429%; }
 
 .card-19,
-.card-49 {
-  left: 60%; }
+.card-47 {
+  left: 64.28571%; }
 
 .card-20,
-.card-50 {
-  left: 63.33333%; }
+.card-48 {
+  left: 67.85714%; }
 
 .card-21,
-.card-51 {
-  left: 66.66667%; }
+.card-49 {
+  left: 71.42857%; }
 
 .card-22,
-.card-52 {
-  left: 70%; }
+.card-50 {
+  left: 75%; }
 
 .card-23,
-.card-53 {
-  left: 73.33333%; }
+.card-51 {
+  left: 78.57143%; }
 
 .card-24,
-.card-54 {
-  left: 76.66667%; }
+.card-52 {
+  left: 82.14286%; }
 
 .card-25,
-.card-55 {
-  left: 80%; }
+.card-53 {
+  left: 85.71429%; }
 
 .card-26,
-.card-56 {
-  left: 83.33333%; }
+.card-54 {
+  left: 89.28571%; }
 
 .card-27,
-.card-57 {
-  left: 86.66667%; }
+.card-55 {
+  left: 92.85714%; }
 
 .card-28,
-.card-58 {
-  left: 90%; }
-
-.card-29,
-.card-59 {
-  left: 93.33333%; }
-
-.card-30,
-.card-60 {
-  left: 96.66667%; }
+.card-56 {
+  left: 96.42857%; }
 
 /*# sourceMappingURL=dv-cards.css.map */
